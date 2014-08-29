@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>TEXT AREA</title>
+	<meta charset="utf-8">
+	<style>
+	#notesfield{
+		width: 158px;	
+		font-size: 14px;
+	}
+	</style>
+	<script>
+    function addRows(){
+    	var lengthOfLeters = document.getElementById("notesfield").value.length;
+		if (lengthOfLeters>=0 && 18>= lengthOfLeters) {
+			document.getElementById("notesfield").setAttribute("rows", 1);
+		}
+		if (lengthOfLeters>18 && 36>= lengthOfLeters) {
+			document.getElementById("notesfield").setAttribute("rows", 2);
+		}
+		if (lengthOfLeters>36 && 54>= lengthOfLeters) {
+			document.getElementById("notesfield").setAttribute("rows", 3);
+		}
+		if (lengthOfLeters>54 && 72>= lengthOfLeters) {
+			document.getElementById("notesfield").setAttribute("rows", 4);
+		}
+    }
+	</script>
+</head>
+<body>
+	<textarea id="notesfield" rows="1" wrap="soft" onkeyup="addRows()"></textarea>
+	
+</body>
+</html>
